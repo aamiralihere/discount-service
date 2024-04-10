@@ -18,6 +18,7 @@ git clone https://github.com/aamiralihere/discount-service.git
 
 **2. Build the Project**
 - Go to the cloned project directory and build the project using following command
+- It will also run all the Tests along with creating a JAR file of the project in **\target** directory
 
 ```bash
 mvn clean package
