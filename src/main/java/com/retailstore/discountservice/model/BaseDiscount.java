@@ -1,0 +1,1 @@
+package com.retailstore.discountservice.model;import com.retailstore.discountservice.constant.DiscountPercentage;public interface BaseDiscount {    Double applyDiscount(Double amount);}
