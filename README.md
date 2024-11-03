@@ -52,11 +52,21 @@ docker run -d -p 8080:8080 discount-service-0.0.1.jar
 **c. Access the Application**
 - The application is now accessible at **http://localhost:8080**
 
+**d. Authentication (Basic Auth)**
+
+- The API is protected by Basic Authentication
+Following credentials are required:
+  - Username: admin 
+  - Password: adminpassword
+
 **4. Test with Swagger-UI**
 - Go to this URL in the browser **http://localhost:8080/swagger-ui/index.html**
-- Click on POST request option of **/discount/calculate**
+- Click on **Authorize** button on right top side and enter the following credentials and save:
+  Username: admin
+  Password: adminpassword
+- Click on POST request option of **/discount/api/calculate**
 - Click **Try it out** button and run below request body by copying and pasting it on Swagger UI screen
-
+  
 **Request Body for Swagger UI**
 ```
 {
@@ -97,17 +107,23 @@ docker run -d -p 8080:8080 discount-service-0.0.1.jar
 ![Alt Text](images/discount-service-Swagger-UI.png)
 
 **5. Test with Postman**
-- Send a POST request by adding the below given request body to this URL in the postman **http://localhost:8080/discount/calculate**
+- The API is protected by Basic Authentication so to test in Postman:
+
+- Go to the Authorization tab.
+- Select Basic Auth.
+- Enter the following credentials and save:
+  - Username: admin
+  - Password: adminpassword
+- Send a POST request by adding the below given request body to this URL in the postman **http://localhost:8080/discount/api/calculate**
 
 **Request Body for Postman**
 ```
-{
-    "user": {
+"user": {
         "userTypes": [
             "CUSTOMER",
             "EMPLOYEE"
         ],
-        "createdDate": "2024-04-09T19:21:44.844"
+        "createdDate": "2024-11-04T19:21:44.844"
     },
     "items": [
         {
@@ -128,7 +144,9 @@ docker run -d -p 8080:8080 discount-service-0.0.1.jar
             "itemPrice": 1000,
             "itemType": "COSMETIC"
         }
-    ]
+    ],
+  "originalCurrency": "pkr",
+  "targetCurrency": "usd"
 }
 ```
 
