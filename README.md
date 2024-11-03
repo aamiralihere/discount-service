@@ -60,12 +60,12 @@ docker run -d -p 8080:8080 discount-service-0.0.1.jar
 **Request Body for Swagger UI**
 ```
 {
-    "user": {
+  "user": {
         "userTypes": [
             "CUSTOMER",
             "EMPLOYEE"
         ],
-        "createdDate": "2024-11-03T19:21:44.844"
+        "createdDate": "2024-11-04T19:21:44.844"
     },
     "items": [
         {
@@ -86,7 +86,9 @@ docker run -d -p 8080:8080 discount-service-0.0.1.jar
             "itemPrice": 1000,
             "itemType": "COSMETIC"
         }
-    ]
+    ],
+  "originalCurrency": "pkr",
+  "targetCurrency": "usd"
 }
 ```
 
