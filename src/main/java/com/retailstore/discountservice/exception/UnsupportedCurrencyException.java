@@ -1,0 +1,1 @@
+package com.retailstore.discountservice.exception;// Define a custom exceptionpublic class UnsupportedCurrencyException extends RuntimeException {    public UnsupportedCurrencyException(String message) {        super(message);    }}

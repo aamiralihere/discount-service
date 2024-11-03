@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: discount-service
+
+  cache:
+    caffeine:
+      spec: maximumSize=1000,expireAfterWrite=10m
+
+  security:
+    user:
+      name: admin
+      password: adminpassword
+    csrf:
+      enabled: false
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+
+feign:
+  client:
+    currency-exchange-client:
+      url: https://open.er-api.com/v6/latest
+      key: 3a65c44490b14922896bc6f78b1d5044
+

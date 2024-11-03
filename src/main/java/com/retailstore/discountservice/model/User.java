@@ -1,0 +1,1 @@
+package com.retailstore.discountservice.model;import com.retailstore.discountservice.constant.UserType;import lombok.*;import java.time.LocalDateTime;import java.util.List;@Getter@Setter@ToString@AllArgsConstructorpublic class User {    private List<UserType> userTypes;    private LocalDateTime createdDate;}

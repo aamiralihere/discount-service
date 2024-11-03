@@ -1,0 +1,1 @@
+package com.retailstore.discountservice.model;import com.retailstore.discountservice.constant.ItemType;import lombok.*;@Getter@Setter@ToString@AllArgsConstructorpublic class Item {    private String itemName;    private String itemDescription;    private Double itemPrice;    private ItemType itemType;}
